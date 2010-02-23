@@ -1,0 +1,13 @@
+Setting this up:
+
+ * Install Django 1.1.1 on whatever dev machine you're using.
+ * Copy rbsite/settings.py-dist to rbsite/settings.py
+   - This is by default set to expect the HG repo to be checked out to a
+	  folder called "sitev8" into your home directory.
+	- It will create a SQLite database called rbsite.db in your home 
+	  directory when you run syncdb.
+	- hgignore is set to ignore this file, so if you want permanent changes,
+	  add them to the settings.py-dist file instead.
+ * Run rbsite/manage.py syncdb to create ~/rbsite.db and fill in your
+   local admin details.
+
