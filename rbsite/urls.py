@@ -5,9 +5,12 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-#	(r'^home/', include('rbsite.blog.urls')),
-	(r'^', include('posts.urls')),
+	# news posts.
+	(r'^news/', include('rbsite.blog.urls')),
 	
     # Uncomment the next line to enable the admin:
     (r'^admin/', include(admin.site.urls)),
+
+	# Comments
+    (r'^comments/', include('django.contrib.comments.urls')),
 )

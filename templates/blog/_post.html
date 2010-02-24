@@ -1,6 +1,6 @@
- <div id=”object_{{ object.id }}”>
+<div id="object_{{ object.id }}">
 <h2>
-    <a href=”{% url post object.id %}”>{{ object.title }}</a>
+    <a href="{% url post object.id %}">{{ object.title }}</a>
     <small>{{ object.pub_date|timesince }} ago</small>
     </h2>
     {{ object.body }}

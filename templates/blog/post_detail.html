@@ -1,5 +1,37 @@
-{% extends ‘base.html’ %}
- <a href=”{% url posts %}”>Back to posts</a>
+{% extends 'base.html' %}
 {% block content %}
-{% include ‘posts/_post.html’ %}
+{% load comments %}
+
+<a href="{% url blog %}">Back to posts</a>
+{% include 'blog/_post.html' %}
+{% get_comment_list for object as comment_list %}
+<h3>Comments</h3>
+{% for comment in comment_list %}
+    <div id="comment_{{ comment.id }}">
+        <p>{{ comment.comment }}</p>
+        <small>{{ comment.name }}</small>
+    </div>
+{% empty %}
+    <p>It’s pretty quiet here… be first to comment!</p>
+{% endfor %}
+
+<hr/>
+<h3>Your comment</h3>
+{% get_comment_form for object as form %}
+<form action="{% comment_form_target %}?next={% url post object.id %}" method="post">
+    {{ form.content_type }}
+    {{ form.object_pk }}
+    {{ form.timestamp }}
+    {{ form.security_hash }}
+    <p style="display:none"><label for="id_honeypot">Leave blank</label>{{ form.honeypot }}</p>
+    <p>
+        <label for="id_name">Name</label>
+        {{ form.name }}
+    </p>
+    <p>
+        <label for="id_comment">Comment</label>
+        {{ form.comment }}
+    </p>
+    <p><input type="submit" name="post" value="Post" /></p>
+</form>
 {% endblock %}
