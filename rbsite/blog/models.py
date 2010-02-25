@@ -9,6 +9,9 @@ class Post(models.Model):
 	body = models.TextField() 
 	pub_date = models.DateTimeField('Date Published', auto_now_add=True)
 	up_date = models.DateTimeField('Date Updated', auto_now=True)
-
+	
+	def get_absolute_url(self):
+		return "/news/feeds/" 
+	
 	def __unicode__(self):
 		return self.title

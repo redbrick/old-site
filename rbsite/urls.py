@@ -2,8 +2,6 @@ from django.conf.urls.defaults import *
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
-admin.autodiscover()
-
 urlpatterns = patterns('',
 	# news posts.
 	(r'^news/', include('rbsite.blog.urls')),
@@ -14,3 +12,4 @@ urlpatterns = patterns('',
 	# Comments
     (r'^comments/', include('django.contrib.comments.urls')),
 )
+

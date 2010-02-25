@@ -7,7 +7,7 @@ from django.core.paginator import Paginator, InvalidPage, EmptyPage
 def index(request):
 	post_list = Post.objects.all()
 	print post_list
-	paginator = Paginator(post_list, 2) # Show 5 contacts per page
+	paginator = Paginator(post_list, 5) # Show 5 contacts per page
 
     # Make sure page request is an int. If not, deliver first page.
  	try:
@@ -20,5 +20,5 @@ def index(request):
 		postlist = paginator.page(page)
 	except (EmptyPage, InvalidPage):
 		postlist = paginator.page(paginator.num_pages)
-	print postlist.paginator.num_pages
+
 	return render_to_response('blog/post_list.html',{"postlist": postlist})
