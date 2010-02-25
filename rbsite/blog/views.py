@@ -20,5 +20,5 @@ def index(request):
 		postlist = paginator.page(page)
 	except (EmptyPage, InvalidPage):
 		postlist = paginator.page(paginator.num_pages)
-
+	print postlist.paginator.num_pages
 	return render_to_response('blog/post_list.html',{"postlist": postlist})
