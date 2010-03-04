@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
+
 {% load comments %}
 {% block content %}
+<img src="/media/images/squares.png">
 {% for object in postlist.object_list %}
     <hr/>
     {% include 'blog/_post.html' %}
