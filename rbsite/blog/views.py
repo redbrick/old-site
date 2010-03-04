@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render_to_response
-from models import Post
+from rbsite.blog.models import Post
 from django.core.paginator import Paginator, InvalidPage, EmptyPage
 
 # Create your views here.

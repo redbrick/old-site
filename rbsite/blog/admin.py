@@ -1,11 +1,11 @@
 from django.contrib import admin
-from models import Post
+from rbsite.blog.models import Post
 
 class PostAdmin(admin.ModelAdmin):
 	fields = ('title', 'body')
 	list_display = ('title', 'author', 'pub_date')
 	date_hierarchy = 'pub_date'
-
+	
 	#Set author automatically to the logged in user. 
 	def save_model(self, request, obj, form, change):   
 		if not change:
