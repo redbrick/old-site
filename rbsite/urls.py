@@ -14,7 +14,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
 	# news posts.
-	(r'^news/', include('rbsite.blog.urls')),
+	(r'^home/', include('rbsite.blog.urls')),
 	
     # Uncomment the next line to enable the admin:
     (r'^admin/', include(admin.site.urls)),
