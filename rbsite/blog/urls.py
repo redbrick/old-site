@@ -7,9 +7,9 @@ feeds = {
 }
 
 queryset = {'queryset': Post.objects.order_by('-pub_date')}
-urlpatterns = patterns('',#'django.views.generic.list_detail',
-	url('^$', 'rbsite.blog.views.index'),#, queryset, name="blog"),    
-	url('^(?P<object_id>\d+)/$', 'object_detail', queryset, name="post"),
+urlpatterns = patterns('',
+	url('^$', 'rbsite.blog.views.index', name="blog"),
+	url('^(?P<object_id>\d+)/$', 'django.views.generic.list_detail.object_detail', queryset, name="post"),
  	(r'^feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': feeds}),
 )
 
