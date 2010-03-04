@@ -1,0 +1,60 @@
+body {
+	background-color : #fff;
+	color : #000;
+	font-family : Helvetica, Arial, sans-serif;
+}
+
+div.container {
+	width : 900px;
+	margin-left : auto;
+	margin-right : auto;
+	color : #000;
+	background-color : transparent;
+}
+
+div.primary_header {
+	width : 900px;
+	background-image : url(/media/images/rbheader2.png);
+	background-repeat : no-repeat;
+	background-position : left bottom;
+	height : 77px;
+	padding-left : 297px;
+}
+
+div.main_area {
+	width : 900px;
+	border : solid 1px #222;
+}
+
+div.top_menu {
+	width : 900px;
+	background-color : #ccc;
+	height : 25px;
+	margin : 0px;
+	font-size : 8pt;
+	font-weight : bold;
+}
+
+div.top_menu ul {
+	margin : 0px;
+	padding-left : 0px;
+	
+}
+div.top_menu ul li {
+	list-style : none;
+	float : left;
+	list-style-position : outside;
+	list-style-type : none;
+	padding-top : 5px;
+}
+
+div.top_menu img {
+	float : left;
+	padding-left : 20px;
+	padding-right : 5px;
+}
+div.main_area_inner { 
+	width : 880px;
+	padding : 10px;
+	border : none;
+}

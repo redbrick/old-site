@@ -3,6 +3,7 @@ from django.conf.urls.defaults import *
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 from rbsite.blog.feeds import LatestEntries
+import rbsite.settings
 
 
 feeds = {
@@ -24,5 +25,8 @@ urlpatterns = patterns('',
     
     # feeds
     (r'^feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': feeds}),
+    
+    # static media, for dev only
+    (r'media/(?P<path>.*)$', 'django.views.static.serve', {'document_root':rbsite.settings.MEDIA_ROOT}),
 )
 

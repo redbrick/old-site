@@ -1,12 +1,22 @@
 <!DOCTYPE html PUBLIC “-//W3C//DTD XHTML Transitional//EN” “http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
 <html xmlns=”http://www.w3.org/1999/xhtml” xml:lang=”en” lang=”en”>
     <head>
-        <meta http-equiv=”Content-type” content=”text/html; charset=utf-8″ />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
         <title>Redbrick</title>
-        <link rel=”stylesheet” href=”{{ MEDIA_URL}}css/style.css” type=”text/css” media=”screen,projection” />
+        <link rel="stylesheet" href="/media/css/style.css" type="text/css" media="screen,projection" />
     </head>
     <body>
-        <h1><a href="/home">News</a></h1>
-        {% block content %}{% endblock %}
+    	<div class="container">
+    		<div class="primary_header">Header stuff goes here</div>
+    		
+    		<div class="main_area">
+    			<div class="top_menu"><ul><img src="/media/images/downarrow.png" alt="Home"><li>Home</li><img src="/media/images/downarrow.png" alt="Home"><li>About</li><img src="/media/images/downarrow.png" alt="Home"><li>Events</li><img src="/media/images/downarrow.png" alt="Home"><li>Community</li><img src="/media/images/downarrow.png" alt="Home"><li>Services</li></ul></div>
+    			<div class="main_area_inner">
+   		 			{% block content %}
+	    			{% endblock %}
+    			</div>
+    		</div>
+    	</div>
     </body>
 </html>
+
