@@ -2,8 +2,15 @@ from django.conf.urls.defaults import *
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
-admin.autodiscover()
+from rbsite.blog.feeds import LatestEntries
 
+
+feeds = {
+	'latest': LatestEntries,
+}
+
+# Auto discover admin stuff
+admin.autodiscover()
 
 urlpatterns = patterns('',
 	# news posts.
@@ -14,5 +21,8 @@ urlpatterns = patterns('',
 
 	# Comments
     (r'^comments/', include('django.contrib.comments.urls')),
+    
+    # feeds
+    (r'^feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': feeds}),
 )
 

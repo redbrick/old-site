@@ -1,13 +1,15 @@
 from django.contrib.syndication.feeds import Feed
-from blog.models import Post
+from rbsite.blog.models import Post
 
 class LatestEntries(Feed):
 	title = "redbrick.dcu.ie news updates"
-	link = "http://www.redbrick.dcu.ie/news"
+	link = "/news/"
 	description = "Updates on the latest news and announcements at redbrick.dcu.ie."
-
-	def link(self, obj):
-		return obj.get_absolute_url()
-
+	
 	def items(self):
-		return Post.objects.all().order_by('-pub_date')[:10]
+		return Post.objects.order_by('-pub_date')[:10]
+	
+	def item_link(self, item):
+		if not item:
+			return ""
+		return "/news/%i/" % item.id
