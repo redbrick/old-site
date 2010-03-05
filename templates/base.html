@@ -7,22 +7,12 @@
     </head>
     <body>
     	<div class="container">
-    		<div class="primary_header">Header stuff goes here</div>
-    		
-    		<div class="main_area">
-    		<!--	<div class="top_menu"><ul><img src="/media/images/downarrow.png" alt="Home"><li>Home</li><img src="/media/images/downarrow.png" alt="Home"><li>About</li><img src="/media/images/downarrow.png" alt="Home"><li>Events</li><img src="/media/images/downarrow.png" alt="Home"><li>Community</li><img src="/media/images/downarrow.png" alt="Home"><li>Services</li></ul></div> -->
-    			<div class="main_area_left">
+    		<div class="primary_header">Header stuff goes here
+			</div>
+			{% include 'Banner_menu.html' %}					
 
-    			</div>
-				<div class ="main_area_boxes">
-					<div class = "main_area_box1">
-					</div>
-					<div class = "main_area_box2">
-					</div>
-					<div class = "main_area_box3">
-					</div>
-				</div>
-    		</div>
+    		<!-- News box section.-->
+			{% include 'Homepage_mainArea.html' %}					
     	</div>
     </body>
 </html>
