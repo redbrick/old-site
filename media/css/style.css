@@ -15,17 +15,13 @@ div.container {
 }
 
 div.primary_header {
+	margin-bottom: 6px;
 	width : 900px;
-	background-image : url(/media/images/rbheader2.png);
+	background-image : url(/media/images/Banner_tmp.png);
 	background-repeat : no-repeat;
 	background-position : left bottom;
-	height : 77px;
+	height : 110px;
 	padding-left : 297px;
-}
-
-div.main_area {
-	width : 900px;
-	border : solid 1px #222;
 }
 
 div.top_menu {
@@ -56,8 +52,43 @@ div.top_menu img {
 	padding-left : 20px;
 	padding-right : 5px;
 }
-div.main_area_inner { 
-	width : 880px;
-	padding : 10px;
+
+div.main_area {
+	width : 900px;
+	height: 200px;
+}
+
+div.main_area_left { 
+	width : 620px;
+	height: 240px;	
+	padding-top : 10px;
 	border : none;
+	float: left;
+	background-image : url(/media/images/mainSquare.png);
+}
+div.main_area_boxes {
+	width : 280px;
+	height: 240px;
+	float : right;
+}
+div.main_area_box1 {
+	background-image : url(/media/images/yellowSquare.png);
+	width: 260px;
+	height: 80px;
+	margin-left: 4px;
+	margin-bottom: 6px;
+	margin-top: .5px;
+}
+div.main_area_box2 {
+	background-image : url(/media/images/redSquare.png);
+	width: 260px;
+	height: 80px;
+	margin-left: 4px;
+	margin-bottom: 6px;
+}
+div.main_area_box3 {
+	background-image : url(/media/images/pinkSquare.png);
+	width: 260px;
+	height: 80px;
+	margin-left: 4px;
 }
