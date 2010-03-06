@@ -20,12 +20,12 @@ div.primary_header {
 	background-image : url(/media/images/Banner.png);
 	background-repeat : no-repeat;
 	background-position : left bottom;
-	height : 110px;
+	height : 109px;
 	padding-left : 297px;
 }
 div.top_menu {
 	width : 580px;
-	height : 25px;
+	height : 20px;
 	font-size : 8pt;
 	font-weight : bold;
 	color: #fff;
@@ -40,12 +40,12 @@ div.top_menu ul li {
 	float : right;
 	list-style-position : outside;
 	list-style-type : none;
-	padding-top : 10px;
+	padding-top: 10px;
+	padding-right: 10px;
 }
 div.top_menu img {
-	float: right;
 	padding-top: 5px;
-	padding-left : 20px;
+	float: right;
 	padding-right : 1px;
 }
 div.icon_menu {
@@ -53,11 +53,14 @@ div.icon_menu {
 	height: 80px;
 }
 div.icon_menu ul li {
+	display: block;
+	height: 80px;
+	padding-right: 10px;
+	margin-top: 0px;
 	list-style : none;
 	float : right;
 	list-style-position : outside;
 	list-style-type : none;
-	padding-top : 10px;
 }
 /* Main news area for front page */
 div.main_area {
@@ -110,6 +113,4 @@ div.main_area_box3 {
 div.main_area_box3:hover{
 	background-image : url(/media/images/pinkSquareHover.png);
 }
-.menuItem:hover {
-  background-color:#F00;
-}
+
