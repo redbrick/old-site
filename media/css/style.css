@@ -64,7 +64,7 @@ div.icon_menu ul li {
 /* Main news area for front page */
 div.main_area {
 	width : 900px;
-	height: 200px;
+	height: 245px;
 }
 div.main_area_left { 
 	width : 620px;
@@ -115,7 +115,8 @@ div.main_area_box3:hover{
 
 /* Footer */
 div.footer{
-	width : 900px;
-	height : 109px;
+	margin-top: 12px;
+	width : 880px;
+	height : 110px;
 	background-image : url(/media/images/footer.png);
 }
