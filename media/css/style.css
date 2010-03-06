@@ -13,7 +13,7 @@ div.container {
 	color : #000;
 	background-color : transparent;
 }
-
+/* all fallwoing used for banner, icon menu and menu.. */
 div.primary_header {
 	margin-bottom: 6px;
 	width : 900px;
@@ -23,41 +23,47 @@ div.primary_header {
 	height : 110px;
 	padding-left : 297px;
 }
-
 div.top_menu {
-	width : 900px;
-	background-color : #ccc;
+	width : 580px;
 	height : 25px;
-	margin : 0px;
 	font-size : 8pt;
 	font-weight : bold;
+	color: #fff;
 }
-
 div.top_menu ul {
 	margin : 0px;
 	padding-left : 0px;
-	
+	padding-right: 10px;
 }
 div.top_menu ul li {
 	list-style : none;
-	float : left;
+	float : right;
 	list-style-position : outside;
 	list-style-type : none;
-	padding-top : 5px;
-	background-color : #eee;
+	padding-top : 10px;
 }
-
 div.top_menu img {
-	float : left;
+	float: right;
+	padding-top: 5px;
 	padding-left : 20px;
-	padding-right : 5px;
+	padding-right : 1px;
 }
-
+div.icon_menu {
+	width : 580px;
+	height: 80px;
+}
+div.icon_menu ul li {
+	list-style : none;
+	float : right;
+	list-style-position : outside;
+	list-style-type : none;
+	padding-top : 10px;
+}
+/* Main news area for front page */
 div.main_area {
 	width : 900px;
 	height: 200px;
 }
-
 div.main_area_left { 
 	width : 620px;
 	height: 240px;	
@@ -73,22 +79,37 @@ div.main_area_boxes {
 }
 div.main_area_box1 {
 	background-image : url(/media/images/yellowSquare.png);
+	display: block;
 	width: 260px;
 	height: 80px;
 	margin-left: 4px;
 	margin-bottom: 6px;
 	margin-top: .5px;
 }
+div.main_area_box1:hover{
+	background-image : url(/media/images/yellowSquareHover.png);
+}
 div.main_area_box2 {
 	background-image : url(/media/images/redSquare.png);
+	display: block;
 	width: 260px;
 	height: 80px;
 	margin-left: 4px;
 	margin-bottom: 6px;
 }
+div.main_area_box2:hover{
+	background-image : url(/media/images/redSquareHover.png);
+}
 div.main_area_box3 {
 	background-image : url(/media/images/pinkSquare.png);
+	display: block;
 	width: 260px;
 	height: 80px;
 	margin-left: 4px;
+}
+div.main_area_box3:hover{
+	background-image : url(/media/images/pinkSquareHover.png);
+}
+.menuItem:hover {
+  background-color:#F00;
 }
