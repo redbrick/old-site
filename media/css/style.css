@@ -120,3 +120,34 @@ div.footer{
 	height : 110px;
 	background-image : url(/media/images/footer.png);
 }
+div.links{
+	padding: none;
+	margin: none;
+	display: inline;
+	float: left;
+	font-size: 0.66em;
+	width: 125px;
+}
+div.links h3 {
+	font-weight : bold;
+	color:  #000;
+	border-bottom:3px solid #fff;
+	padding: none;
+	margin: none;
+	padding:0 0.5em 0.125em;
+}
+
+div.links ul {
+	padding-left: 10px;
+	margin: none;
+	line-height: 1.2;
+}
+div.links li {
+	padding: none;
+	margin: none;
+	list-style: none;
+}
+div.links .blank{
+	color:  #ccc;
+}
+
