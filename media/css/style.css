@@ -113,7 +113,12 @@ div.main_area_box3:hover{
 	background-image : url(/media/images/pinkSquareHover.png);
 }
 
-/* Footer */
+/* Footer_________________________________________________ */
+div.links a:link {color: #000000; text-decoration: none; }
+div.links a:active {color: #ff0000; text-decoration: underline; }
+div.links a:visited {color: #800; text-decoration: none; }
+div.links a:hover {color: #ff0000; text-decoration: none; }
+
 div.footer{
 	margin-top: 12px;
 	width : 880px;
