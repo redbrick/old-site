@@ -22,31 +22,6 @@ div.primary_header {
 	height : 109px;
 	padding-left : 297px;
 }
-div.top_menu {
-	width : 580px;
-	height : 20px;
-	font-size : 8pt;
-	font-weight : bold;
-	color: #fff;
-}
-div.top_menu ul {
-	margin : 0px;
-	padding-left : 0px;
-	padding-right: 10px;
-}
-div.top_menu ul li {
-	list-style : none;
-	float : right;
-	list-style-position : outside;
-	list-style-type : none;
-	padding-top: 10px;
-	padding-right: 10px;
-}
-div.top_menu img {
-	padding-top: 5px;
-	float: right;
-	padding-right : 1px;
-}
 div.icon_menu {
 	width : 580px;
 	height: 80px;
@@ -112,6 +87,69 @@ div.main_area_box3 {
 div.main_area_box3:hover{
 	background-image : url(/media/images/pinkSquareHover.png);
 }
+
+
+/* Drop down menu _______ */
+div.top_menu {
+	width : 580px;
+	height : 20px;
+	font-size : 8pt;
+	font-weight : bold;
+}
+#sddm{	
+	margin: 0;
+	padding: 0;
+	z-index: 30
+}
+#sddm li{	
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: right;
+	font: bold 11px arial
+}
+
+#sddm li a{	
+	display: block;
+	margin: 0 1px 0 0;
+	padding: 4px 20px 10px;
+	background-image:  url(/media/images/downarrow.png);
+	background-repeat:no-repeat;
+	color: #FFF;
+	text-align: center;
+	text-decoration: none
+}
+
+#sddm li a:hover{	
+	background-image:  url(/media/images/downarrowHover.png);
+}
+#sddm div{	
+	position: absolute;
+	visibility: hidden;
+	margin: 0;
+	padding: 0;
+	background: #EAEBD8;
+	border: 1px solid #aa0a17
+}
+
+#sddm div a{	
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 5px 10px;
+	width: auto;	
+	white-space: nowrap;
+	text-align: left;
+	text-decoration: none;
+	background: #000;
+	color: #FFF;
+	font: 11px arial
+}
+#sddm div a:hover{
+	background: #aa0a17;
+	color: #FFF
+}
+
 
 /* Footer_________________________________________________ */
 div.links a:link {color: #000000; text-decoration: none; }
