@@ -5,7 +5,7 @@ from django.core.paginator import Paginator, InvalidPage, EmptyPage
 
 # Create your views here.
 def index(request):
-	return render_to_response('blog/post_list.html')
+	return render_to_response('base.html')
 
 def news(request):
 	post_list = Post.objects.all()
@@ -23,4 +23,4 @@ def news(request):
 	except (EmptyPage, InvalidPage):
 		postlist = paginator.page(paginator.num_pages)
 	
-	return render_to_response('blog/post_list.html',{"postlist": postlist})
+	return render_to_response('news.html',{"postlist": postlist})

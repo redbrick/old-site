@@ -6,6 +6,8 @@ from django.core.paginator import Paginator, InvalidPage, EmptyPage
 class Post(models.Model):
 	author = models.ForeignKey(User, related_name='posts')
 	title = models.CharField(max_length=200)
+	teaser = models.TextField()
+	largeTeaser = models.TextField()
 	body = models.TextField() 
 	pub_date = models.DateTimeField('Date Published', auto_now_add=True)
 	up_date = models.DateTimeField('Date Updated', auto_now=True)

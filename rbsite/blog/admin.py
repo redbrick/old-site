@@ -2,7 +2,7 @@ from django.contrib import admin
 from rbsite.blog.models import Post
 
 class PostAdmin(admin.ModelAdmin):
-	fields = ('title', 'body')
+	fields = ('title','teaser',"largeTeaser", 'body')
 	list_display = ('title', 'author', 'pub_date')
 	date_hierarchy = 'pub_date'
 	
