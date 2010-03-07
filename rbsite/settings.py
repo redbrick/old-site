@@ -5,9 +5,10 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 AUTHENTICATION_BACKENDS = (
-	'lib.auth.authPubcookie',
+	'rbsite.lib.auth.authPubcookie',
 	'django.contrib.auth.backends.ModelBackend',
 )
+
 ADMINS = (
 	('Kat Farrell', 'angelkat@redbrick.dcu.ie'),
     # ('Your Name', 'your_email@domain.com'),
@@ -89,4 +90,5 @@ INSTALLED_APPS = (
 	 'django.contrib.admin',
 	 'django.contrib.comments',
 	 'rbsite.blog',
+	 'rbsite.static',
 )

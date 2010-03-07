@@ -28,5 +28,8 @@ urlpatterns = patterns('',
     
     # static media, for dev only
     (r'media/(?P<path>.*)$', 'django.views.static.serve', {'document_root':rbsite.settings.MEDIA_ROOT}),
+    
+    # Everything else gets passed through static page handler
+    (r'', 'rbsite.static.views.static'),
 )
 

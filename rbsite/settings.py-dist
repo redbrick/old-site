@@ -5,7 +5,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 AUTHENTICATION_BACKENDS = (
-	'lib.auth.authPubcookie',
+	'rbsite.lib.auth.authPubcookie',
 	'django.contrib.auth.backends.ModelBackend',
 )
 ADMINS = (
@@ -89,4 +89,5 @@ INSTALLED_APPS = (
 	 'django.contrib.admin',
 	 'django.contrib.comments',
 	 'rbsite.blog',
+	 'rbsite.static',
 )
