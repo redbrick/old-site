@@ -17,6 +17,8 @@ urlpatterns = patterns('',
 	# news posts.
 	(r'^home/', include('rbsite.blog.urls')),
 	
+	(r'^news/', 'rbsite.blog.views.news'),
+	
     # Uncomment the next line to enable the admin:
     (r'^admin/', include(admin.site.urls)),
 
