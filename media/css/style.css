@@ -1,0 +1,196 @@
+body {
+	background-color : #fff;
+	color : #000;
+	font-family : Helvetica, Arial, sans-serif;
+	margin : 0px;
+	margin-top : 20px;
+}
+div.container {
+	width : 900px;
+	margin-left : auto;
+	margin-right : auto;
+	color : #000;
+	background-color : transparent;
+}
+/* all fallwoing used for banner, icon menu and menu.. */
+div.primary_header {
+	margin-bottom: 6px;
+	width : 900px;
+	background-image : url(/media/images/Banner.png);
+	background-repeat : no-repeat;
+	background-position : left bottom;
+	height : 109px;
+	padding-left : 297px;
+}
+div.icon_menu {
+	width : 580px;
+	height: 80px;
+}
+div.icon_menu ul li {
+	display: block;
+	height: 80px;
+	padding-right: 10px;
+	margin-top: 0px;
+	list-style : none;
+	float : right;
+	list-style-position : outside;
+	list-style-type : none;
+}
+/* Main news area for front page */
+div.main_area {
+	width : 900px;
+	height: 245px;
+}
+div.main_area_left { 
+	width : 620px;
+	height: 240px;	
+	padding-top : 10px;
+	border : none;
+	float: left;
+	background-image : url(/media/images/mainSquare.png);
+}
+div.main_area_boxes {
+	width : 280px;
+	height: 240px;
+	float : right;
+}
+div.main_area_box1 {
+	background-image : url(/media/images/yellowSquare.png);
+	display: block;
+	width: 260px;
+	height: 80px;
+	margin-left: 4px;
+	margin-bottom: 6px;
+	margin-top: .5px;
+}
+div.main_area_box1:hover{
+	background-image : url(/media/images/yellowSquareHover.png);
+}
+div.main_area_box2 {
+	background-image : url(/media/images/redSquare.png);
+	display: block;
+	width: 260px;
+	height: 80px;
+	margin-left: 4px;
+	margin-bottom: 6px;
+}
+div.main_area_box2:hover{
+	background-image : url(/media/images/redSquareHover.png);
+}
+div.main_area_box3 {
+	background-image : url(/media/images/pinkSquare.png);
+	display: block;
+	width: 260px;
+	height: 80px;
+	margin-left: 4px;
+}
+div.main_area_box3:hover{
+	background-image : url(/media/images/pinkSquareHover.png);
+}
+
+
+/* Drop down menu _______ */
+div.top_menu {
+	width : 580px;
+	height : 20px;
+	font-size : 8pt;
+	font-weight : bold;
+}
+#sddm{	
+	margin: 0;
+	padding: 0;
+	z-index: 30
+}
+#sddm li{	
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: right;
+	font: bold 11px arial
+}
+
+#sddm li a{	
+	display: block;
+	margin: 0 1px 0 0;
+	padding: 4px 20px 10px;
+	background-image:  url(/media/images/downarrow.png);
+	background-repeat:no-repeat;
+	color: #FFF;
+	text-align: center;
+	text-decoration: none
+}
+
+#sddm li a:hover{	
+	background-image:  url(/media/images/downarrowHover.png);
+}
+#sddm div{	
+	position: absolute;
+	visibility: hidden;
+	margin: 0;
+	padding: 0;
+	background: #EAEBD8;
+	border: 1px solid #aa0a17
+}
+
+#sddm div a{	
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 5px 10px;
+	width: auto;	
+	white-space: nowrap;
+	text-align: left;
+	text-decoration: none;
+	background: #000;
+	color: #FFF;
+	font: 11px arial
+}
+#sddm div a:hover{
+	background: #aa0a17;
+	color: #FFF
+}
+
+
+/* Footer_________________________________________________ */
+div.links a:link {color: #000000; text-decoration: none; }
+div.links a:active {color: #ff0000; text-decoration: underline; }
+div.links a:visited {color: #800; text-decoration: none; }
+div.links a:hover {color: #ff0000; text-decoration: none; }
+
+div.footer{
+	margin-top: 12px;
+	width : 880px;
+	height : 110px;
+	background-image : url(/media/images/footer.png);
+}
+div.links{
+	padding: none;
+	margin: none;
+	display: inline;
+	float: left;
+	font-size: 0.66em;
+	width: 125px;
+}
+div.links h3 {
+	font-weight : bold;
+	color:  #000;
+	border-bottom:3px solid #fff;
+	padding: none;
+	margin: none;
+	padding:0 0.5em 0.125em;
+}
+
+div.links ul {
+	padding-left: 10px;
+	margin: none;
+	line-height: 1.2;
+}
+div.links li {
+	padding: none;
+	margin: none;
+	list-style: none;
+}
+div.links .blank{
+	color:  #ccc;
+}
+
