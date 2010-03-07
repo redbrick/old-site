@@ -1,12 +1,13 @@
 {% extends 'news.html' %}
 
 {% load comments %}
-{% block content %}
-{% for object in postlist.object_list %}
-    <hr/>
-    {% include 'blog/_post.html' %}
-    {% get_comment_count for object as comment_count %}
-    <small>{{ comment_count }} comment{{ comment_count|pluralize }}</small>
-{% endfor %}
-{% include 'blog/pagination.html' %}
-{% endblock %}
+	{% block content %}
+	testing	
+		{% for object in postlist.object_list %}
+    	<hr/>
+    		{% include 'blog/_post.html' %}
+    		{% get_comment_count for object as comment_count %}
+    		<small>{{ comment_count }} comment{{ comment_count|pluralize }}</small>
+			{% endfor %}
+			{% include 'blog/pagination.html' %}
+	{% endblock %}

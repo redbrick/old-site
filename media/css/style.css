@@ -12,6 +12,16 @@ div.container {
 	color : #000;
 	background-color : transparent;
 }
+div.content h1{
+	height: 19px;
+	font-size: 15px;
+	color : #fff;
+	padding-top: 1px;
+	padding-left: 5px;
+	background-image : url(/media/images/h1.png);
+	background-image : no-repeat;
+	
+}
 /* all fallwoing used for banner, icon menu and menu.. */
 div.primary_header {
 	margin-bottom: 6px;
