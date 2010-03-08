@@ -1,26 +1,58 @@
-body {
+html, body {
 	background-color : #fff;
 	color : #000;
 	font-family : Helvetica, Arial, sans-serif;
 	margin : 0px;
-	margin-top : 20px;
+	height: auto%; 
 }
 div.container {
+	min-height: 100%;
+	margin-bottom: -110px;
+	position: relative;
+	
 	width : 900px;
 	margin-left : auto;
 	margin-right : auto;
 	color : #000;
 	background-color : transparent;
 }
+/* page content style */
+div.content {
+	width:620;
+	float: left;   
+}
 div.content h1{
+	width: 620px;
 	height: 19px;
 	font-size: 15px;
 	color : #fff;
 	padding-top: 1px;
 	padding-left: 5px;
 	background-image : url(/media/images/h1.png);
-	background-image : no-repeat;
+	background-repeat : no-repeat;
 	
+}
+div.content h1 a:link {color: #fff; text-decoration: none; }
+div.content h1 a:active {color: #fff; text-decoration: underline; }
+div.content h1 a:visited {color: #fff; text-decoration: none; }
+div.content h1 a:hover {color: #000; text-decoration: none; }
+div.content small{
+	float: right;
+	color : #ddd;
+	padding-top: 1px;
+	padding-right: 7px;
+}
+div.content p{
+	font-size: 14px;
+	padding-left: 5px;
+	text-align: justify; 
+}
+div.contentcontainer {
+	width: 899px;
+}
+div.sidebar{
+	width : 200px;
+	float : right;
 }
 /* all fallwoing used for banner, icon menu and menu.. */
 div.primary_header {
@@ -30,9 +62,20 @@ div.primary_header {
 	background-repeat : no-repeat;
 	background-position : left bottom;
 	height : 109px;
-	padding-left : 297px;
+	padding-top:20px;
+}
+div.logo{
+	width : 297px;
+	height : 109px;
+	float: left;	
+}
+div.menus{
+	height: 110px;
+	width : 580px;
+	float: right;
 }
 div.icon_menu {
+	padding:non;
 	width : 580px;
 	height: 80px;
 }
@@ -160,7 +203,6 @@ div.top_menu {
 	color: #FFF
 }
 
-
 /* Footer_________________________________________________ */
 div.links a:link {color: #000000; text-decoration: none; }
 div.links a:active {color: #ff0000; text-decoration: underline; }
@@ -169,9 +211,18 @@ div.links a:hover {color: #ff0000; text-decoration: none; }
 
 div.footer{
 	margin-top: 12px;
-	width : 880px;
+	width : 900px;
 	height : 110px;
 	background-image : url(/media/images/footer.png);
+	background-repeat : no-repeat;
+	
+	position: relative;
+	margin-left : auto;
+	margin-right : auto;
+}
+.clearfooter {
+height: 110px;
+clear: both;
 }
 div.links{
 	padding: none;
