@@ -23,4 +23,4 @@ def news(request):
 	except (EmptyPage, InvalidPage):
 		postlist = paginator.page(paginator.num_pages)
 	
-	return render_to_response('news.html',{"postlist": postlist})
+	return render_to_response('blog/post_list.html',{"postlist": postlist})
