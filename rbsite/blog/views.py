@@ -5,7 +5,7 @@ from django.core.paginator import Paginator, InvalidPage, EmptyPage
 
 # Create your views here.
 def index(request):
-	return render_to_response('base.html')
+	return render_to_response('blog/index.html')
 
 def news(request):
 	post_list = Post.objects.all()

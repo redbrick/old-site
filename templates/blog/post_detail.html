@@ -1,4 +1,6 @@
-{% extends 'real_base.html' %}
+{% extends 'base.html' %}
+
+{% block title %}{{ object.title }}{% endblock %}
 
 {% block content %}
 {% load comments %}
@@ -43,5 +45,4 @@
 		</form>
 	</div>
 </div>
-{% include 'sidebar.html' %}
 {% endblock %}
