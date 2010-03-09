@@ -4,6 +4,7 @@ html, body {
 	font-family : Helvetica, Arial, sans-serif;
 	margin : 0px;
 	height: auto%; 
+	background: url('/media/images/bgcolor.png') repeat-x;
 }
 div.container {
 	min-height: 100%;
@@ -56,17 +57,18 @@ div.sidebar{
 }
 /* all fallwoing used for banner, icon menu and menu.. */
 div.primary_header {
-	margin-bottom: 6px;
 	width : 900px;
-	background-image : url(/media/images/Banner.png);
+	background-image : url(/media/images/headerbg.png);
 	background-repeat : no-repeat;
 	background-position : left bottom;
-	height : 109px;
-	padding-top:20px;
+	height : 150px;
+
 }
 div.logo{
-	width : 297px;
-	height : 109px;
+	width : 250px;
+	height : 80px;
+	margin-top : 70px;
+	margin-left : 50px;
 	float: left;	
 }
 div.menus{
@@ -75,9 +77,16 @@ div.menus{
 	float: right;
 }
 div.icon_menu {
-	padding:non;
-	width : 580px;
-	height: 80px;
+	padding:none;
+	text-align : right;
+	margin-top : 50px;
+	margin-right : 70px;
+	width : 530px;
+	height: 100px;
+}
+div.icon_menu img {
+	padding-left : 20px;
+	border : none;
 }
 div.icon_menu ul li {
 	display: block;
@@ -98,13 +107,15 @@ div.main_area_left {
 	width : 620px;
 	height: 240px;	
 	padding-top : 10px;
+	margin-left : 10px;
 	border : none;
 	float: left;
 	background-image : url(/media/images/mainSquare.png);
 }
 div.main_area_boxes {
-	width : 280px;
+	width : 257px;
 	height: 240px;
+	margin-right : 13px;
 	float : right;
 }
 div.main_area_box1 {
@@ -144,10 +155,16 @@ div.main_area_box3:hover{
 
 /* Drop down menu _______ */
 div.top_menu {
-	width : 580px;
-	height : 20px;
+	background: url('/media/images/menubg.png');
+	width : 900px;
+	height : 29px;
 	font-size : 8pt;
 	font-weight : bold;
+	margin-bottom : 6px;
+}
+
+div.top_menu img {
+	border : none;
 }
 #sddm{	
 	margin: 0;
@@ -165,16 +182,13 @@ div.top_menu {
 #sddm li a{	
 	display: block;
 	margin: 0 1px 0 0;
-	padding: 4px 20px 10px;
-	background-image:  url(/media/images/downarrow.png);
-	background-repeat:no-repeat;
+	padding: 0px 20px 0px;
 	color: #FFF;
 	text-align: center;
 	text-decoration: none
 }
 
 #sddm li a:hover{	
-	background-image:  url(/media/images/downarrowHover.png);
 }
 #sddm div{	
 	position: absolute;
@@ -182,7 +196,9 @@ div.top_menu {
 	margin: 0;
 	padding: 0;
 	background: #EAEBD8;
-	border: 1px solid #aa0a17
+	border: 1px solid #888;
+	border-left : none;
+	border-right : none;
 }
 
 #sddm div a{	
@@ -190,35 +206,38 @@ div.top_menu {
 	display: block;
 	margin: 0;
 	padding: 5px 10px;
-	width: auto;	
+	width: auto;
 	white-space: nowrap;
 	text-align: left;
 	text-decoration: none;
-	background: #000;
+	background: #888;
 	color: #FFF;
-	font: 11px arial
+	font: 10pt Arial
 }
 #sddm div a:hover{
-	background: #aa0a17;
+	background: #cc0000;
 	color: #FFF
 }
 
 /* Footer_________________________________________________ */
-div.links a:link {color: #000000; text-decoration: none; }
+div.links a:link {color: #000; text-decoration: none; }
 div.links a:active {color: #ff0000; text-decoration: underline; }
-div.links a:visited {color: #800; text-decoration: none; }
+div.links a:visited {color: #000; text-decoration: none; }
 div.links a:hover {color: #ff0000; text-decoration: none; }
 
 div.footer{
 	margin-top: 12px;
-	width : 900px;
+	width : 850px;
 	height : 110px;
 	background-image : url(/media/images/footer.png);
+	background-position : top center;
 	background-repeat : no-repeat;
 	
 	position: relative;
 	margin-left : auto;
 	margin-right : auto;
+	padding : 25px;
+	padding-top : 10px;
 }
 .clearfooter {
 height: 110px;
@@ -229,13 +248,14 @@ div.links{
 	margin: none;
 	display: inline;
 	float: left;
-	font-size: 0.66em;
-	width: 125px;
+	font-size: 8pt;
+	width: 120px;
 }
+
 div.links h3 {
 	font-weight : bold;
 	color:  #000;
-	border-bottom:3px solid #fff;
+	/*border-bottom:3px solid #fff;*/
 	padding: none;
 	margin: none;
 	padding:0 0.5em 0.125em;
