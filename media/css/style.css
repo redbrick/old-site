@@ -19,8 +19,8 @@ div.container {
 }
 /* page content style */
 div.content {
-	width:620;
-	float: left;   
+    width:615px;
+    float: left;  
 }
 div.content h1{
 	width: 620px;
@@ -49,12 +49,20 @@ div.content p{
 	text-align: justify; 
 }
 div.contentcontainer {
-	width: 899px;
+	width: 900px;
 }
 div.sidebar{
-	width : 200px;
+	padding-top: 10px;
+	width : 280px;
 	float : right;
 }
+div.sidebarbox1{
+	width : 280px;
+	height: 110px;
+	background-image : url(/media/images/largeYellowSquare.png);
+	background-repeat : no-repeat;
+}
+
 /* all fallwoing used for banner, icon menu and menu.. */
 div.primary_header {
 	width : 900px;
@@ -270,7 +278,7 @@ div.footer{
 	padding-top : 10px;
 }
 .clearfooter {
-height: 110px;
+height: 20px;
 clear: both;
 }
 div.links{
