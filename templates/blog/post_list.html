@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}All Posts{% endblock %}
+
+{% load comments %}
+{% block content %}
+
+<div class = "contentcontainer">
+	<div class = "content">
+		{% for object in postlist.object_list %}
+
+    		{% include 'blog/_post.html' %}
+    		{% get_comment_count for object as comment_count %}
+    		<comment>{{ comment_count }} comment{{ comment_count|pluralize }}</commen><hr/>
+
+		{% endfor %}
+		{% include 'blog/pagination.html' %}
+	</div>
+</div>
+{% endblock %}
