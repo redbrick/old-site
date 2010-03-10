@@ -104,50 +104,80 @@ div.main_area {
 	height: 245px;
 }
 div.main_area_left { 
-	width : 620px;
-	height: 240px;	
-	padding-top : 10px;
+	width : 580px;
+	height: 210px;
+	padding : 20px;	
+
 	margin-left : 10px;
 	border : none;
 	float: left;
 	background-image : url(/media/images/mainSquare.png);
+	color : #fff;
+	font-size : 12pt;
 }
+
+div.main_area_left h1 {
+	margin : 0px;
+}
+
+div.main_area a {
+	color : #fff;
+	background-color : transparent;
+}
+
 div.main_area_boxes {
 	width : 257px;
 	height: 240px;
 	margin-right : 13px;
 	float : right;
+	font-size : 10pt;
+	color : #fff;
+	background-color : transparent;
+
 }
-div.main_area_box1 {
-	background-image : url(/media/images/yellowSquare.png);
+
+div.main_area_boxes div {
+	padding : 20px;
+	padding-top : 15px;
+	padding-bottom : 15px;
+	height : 50px;
+	width : 220px;
 	display: block;
-	width: 260px;
-	height: 80px;
 	margin-left: 4px;
 	margin-bottom: 6px;
-	margin-top: .5px;
+}
+div.main_area_boxes h1 {
+	font-size : 14pt;
+	margin : 0px;
+}
+
+div.main_area_boxes p {
+	margin : 0px;
+	padding : 0px;
+}
+
+div.main_area_boxes p.read_more {
+	font-size : 8pt;
+}
+
+div.main_area_box1 {
+	background-image : url(/media/images/yellowSquare.png);
 }
 div.main_area_box1:hover{
 	background-image : url(/media/images/yellowSquareHover.png);
 }
 div.main_area_box2 {
 	background-image : url(/media/images/redSquare.png);
-	display: block;
-	width: 260px;
-	height: 80px;
-	margin-left: 4px;
-	margin-bottom: 6px;
 }
+
 div.main_area_box2:hover{
 	background-image : url(/media/images/redSquareHover.png);
 }
+
 div.main_area_box3 {
 	background-image : url(/media/images/pinkSquare.png);
-	display: block;
-	width: 260px;
-	height: 80px;
-	margin-left: 4px;
 }
+
 div.main_area_box3:hover{
 	background-image : url(/media/images/pinkSquareHover.png);
 }

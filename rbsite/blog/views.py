@@ -5,7 +5,16 @@ from django.core.paginator import Paginator, InvalidPage, EmptyPage
 
 # Create your views here.
 def index(request):
-	return render_to_response('blog/index.html')
+	args = {}
+	
+	for p in ['LL','STR','SMR','SBR']:
+		try:
+			post = Post.objects.filter(show_on_homepage=True).filter(position__exact=p).order_by('-up_date')[0]
+			args[p] = post
+		except:
+			pass
+	
+	return render_to_response('blog/index.html',args)
 
 def news(request):
 	post_list = Post.objects.all()
