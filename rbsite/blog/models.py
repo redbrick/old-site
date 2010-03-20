@@ -22,7 +22,7 @@ class Post(models.Model):
 	up_date = models.DateTimeField('Date Updated', auto_now=True)
 	
 	def get_absolute_url(self):
-		return "/home/%i/" % self.id 
+		return "/news/%i/" % self.id 
 	
 	def __unicode__(self):
 		return self.title
