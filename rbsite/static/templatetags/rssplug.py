@@ -5,6 +5,9 @@ from django import template
 import feedparser
 import time
 
+# Credits:
+# code taken from http://fi.am/entry/plugging-a-rss-feed-into-a-django-template/
+
 register = template.Library()
 
 @register.filter
@@ -43,4 +46,5 @@ class RssPlugNode(template.Node):
 		address = resolve(self.address, context)
 		tmpl = resolve(self.templ, context)
 		t = template.loader.get_template(tmpl)
+		print "render() called"
 		return ''.join([t.render(template.Context({ 'item': item })) for item in self.rss(address).entries])
