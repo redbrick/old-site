@@ -22,25 +22,24 @@ div.content {
 	width:615px;
 	float: left;   
 }
-
 div.content h1{
+	background-color: #c33;
 	width: 620px;
-	height: 19px;
-	font-size: 14px;
+	height: 26px;
+	font-size: 12pt;
 	color : #fff;
-	padding-top: 1px;
-	padding-left: 7px;
-	background-image : url(/media/images/h1.png);
+	padding-top: 6px;
+	padding-left: 12px;
 	background-repeat : no-repeat;
 	
 }
 div.content h1 a:link {color: #fff; text-decoration: none; }
 div.content h1 a:active {color: #fff; text-decoration: underline; }
 div.content h1 a:visited {color: #fff; text-decoration: none; }
-div.content h1 a:hover {color: #000; text-decoration: none; }
+div.content h1 a:hover {color: #000; text-decoration: none;}
 div.content small{
 	float: right;
-	color : #ddd;
+	color : #fff;
 	padding-top: 1px;
 	padding-right: 9px;
 }
@@ -52,33 +51,50 @@ div.content p{
 div.contentcontainer {
 	width: 900px;
 }
+/* sidebar_____________________________________*/
 div.sidebar{
 	padding-left:25px;
 	width : 255px;
 	float : right;
 }
+div.sidebar li{
+	padding-right: 20px;
+}
 div.sidebar h1{
-	font-size: 15px;
-	color: #000;
-	background-image : url(/media/images/yellowbar.png);
+	padding-left:12px;
+	padding-top:6px;
+	height: 26px;
+	font-size: 12pt;
+	color: #fff;
 }
 div.sidebar a {
-	font-size: 10px;
-	padding-left: 20px;
-	 text-decoration: none;
+	font-size: 12px;
+ 	text-decoration: none;
 }
 div.sidebar a:link {color: #000; }
 div.sidebar a:active {color: #ff0000; }
 div.sidebar a:visited {color: #000; }
 div.sidebar a:hover {color: #ff0000; }
-
+div.sidebarbox1 h1 {background-color : #c30;}
+div.sidebarbox2 h1 {background-color : #4a2500;}
+div.sidebarbox3 h1 {background-color : #6a2500;}
 div.sidebarbox1{
-	width : 280px;
-	background-repeat : no-repeat;
+	background-color: #eeeeee;
+	width : 255px;
+	padding-bottom: 10px;
+	
 }
 div.sidebarbox2{
-	width : 280px;
-	background-repeat : no-repeat;
+	background-color: #eeeeee;
+	margin-top:20px;
+	width : 255px;
+	padding-bottom: 10px;	
+}
+div.sidebarbox3{
+	background-color: #eeeeee;
+	margin-top:20px;
+	width : 255px;
+	padding-bottom: 10px;
 }
 /* all fallwoing used for banner, icon menu and menu.. */
 div.primary_header {
@@ -87,7 +103,6 @@ div.primary_header {
 	background-repeat : no-repeat;
 	background-position : left bottom;
 	height : 150px;
-
 }
 div.logo{
 	width : 250px;
@@ -123,7 +138,7 @@ div.icon_menu ul li {
 	list-style-position : outside;
 	list-style-type : none;
 }
-/* Main news area for front page */
+/* Main news area for front page____________*/
 div.main_area {
 	width : 900px;
 	height: 245px;
@@ -132,7 +147,6 @@ div.main_area_left {
 	width : 580px;
 	height: 210px;
 	padding : 20px;	
-
 	margin-left : 10px;
 	border : none;
 	float: left;
@@ -140,16 +154,13 @@ div.main_area_left {
 	color : #fff;
 	font-size : 12pt;
 }
-
 div.main_area_left h1 {
 	margin : 0px;
 }
-
 div.main_area a {
 	color : #fff;
 	background-color : transparent;
 }
-
 div.main_area_boxes {
 	width : 257px;
 	height: 240px;
@@ -158,9 +169,7 @@ div.main_area_boxes {
 	font-size : 10pt;
 	color : #fff;
 	background-color : transparent;
-
 }
-
 div.main_area_boxes div {
 	padding : 20px;
 	padding-top : 15px;
@@ -175,16 +184,13 @@ div.main_area_boxes h1 {
 	font-size : 14pt;
 	margin : 0px;
 }
-
 div.main_area_boxes p {
 	margin : 0px;
 	padding : 0px;
 }
-
 div.main_area_boxes p.read_more {
 	font-size : 8pt;
 }
-
 div.main_area_box1 {
 	background-image : url(/media/images/yellowSquare.png);
 }
@@ -194,20 +200,15 @@ div.main_area_box1:hover{
 div.main_area_box2 {
 	background-image : url(/media/images/redSquare.png);
 }
-
 div.main_area_box2:hover{
 	background-image : url(/media/images/redSquareHover.png);
 }
-
 div.main_area_box3 {
 	background-image : url(/media/images/pinkSquare.png);
 }
-
 div.main_area_box3:hover{
 	background-image : url(/media/images/pinkSquareHover.png);
 }
-
-
 /* Drop down menu _______ */
 div.top_menu {
 	background: url('/media/images/menubg.png');
@@ -217,7 +218,6 @@ div.top_menu {
 	font-weight : bold;
 	margin-bottom : 6px;
 }
-
 div.top_menu img {
 	border : none;
 }
@@ -233,7 +233,6 @@ div.top_menu img {
 	float: right;
 	font: bold 11px arial
 }
-
 #sddm li a{	
 	display: block;
 	margin: 0 1px 0 0;
@@ -242,7 +241,6 @@ div.top_menu img {
 	text-align: center;
 	text-decoration: none
 }
-
 #sddm li a:hover{	
 }
 #sddm div{	
@@ -255,7 +253,6 @@ div.top_menu img {
 	border-left : none;
 	border-right : none;
 }
-
 #sddm div a{	
 	position: relative;
 	display: block;
@@ -279,15 +276,13 @@ div.links a:link {color: #000; text-decoration: none; }
 div.links a:active {color: #ff0000; text-decoration: underline; }
 div.links a:visited {color: #000; text-decoration: none; }
 div.links a:hover {color: #ff0000; text-decoration: none; }
-
 div.footer{
 	margin-top: 12px;
 	width : 850px;
 	height : 110px;
 	background-image : url(/media/images/footer.png);
 	background-position : top center;
-	background-repeat : no-repeat;
-	
+	background-repeat : no-repeat;	
 	position: relative;
 	margin-left : auto;
 	margin-right : auto;
@@ -306,7 +301,6 @@ div.links{
 	font-size: 8pt;
 	width: 120px;
 }
-
 div.links h3 {
 	font-weight : bold;
 	color:  #000;
@@ -315,7 +309,6 @@ div.links h3 {
 	margin: none;
 	padding:0 0.5em 0.125em;
 }
-
 div.links ul {
 	padding-left: 10px;
 	margin: none;
@@ -329,4 +322,3 @@ div.links li {
 div.links .blank{
 	color:  #ccc;
 }
-
