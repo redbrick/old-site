@@ -8,11 +8,16 @@
 	<div class = "content">
 		<div id="object_{{ object.id }}">
 		<h1>
-			<a href="/news/"> Back to posts</a>
+			{{ object.title }}
 		    <small>{{ object.pub_date|timesince }} ago</small>
 		    </h1>
-		    {{ object.body }}
-		</div>	
+		    <div class="innercontent">
+			 {{ object.body }}
+			</div>
+			</div>
+			 <p>
+			 	<a href="/news/">View all news</a>
+			</p>
 	</div>
 	{% include 'sidebar.html' %}
 	<div class = "clearfooter"></div>
