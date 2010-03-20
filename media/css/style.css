@@ -44,10 +44,19 @@ div.content small{
 	padding-top: 1px;
 	padding-right: 9px;
 }
-div.innercontent {
+div.innercontent p {
 	font-size : 10pt;
 	padding-left : 5px;
 	text-align : justify;
+}
+
+div.innercontent h2,h3,h4,h5,h6 {
+	padding-left : 5px;
+}
+
+div.content p a {
+	color : #666;
+	background-color : #fff;
 }
 
 div.contentcontainer {
@@ -289,10 +298,12 @@ div.footer{
 	padding : 15px;
 	padding-top : 10px;
 }
+
 .clearfooter {
-height: 20px;
-clear: both;
+	height: 20px;
+	clear: both;
 }
+
 div.links{
 	padding: none;
 	margin: none;
