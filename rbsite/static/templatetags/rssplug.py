@@ -46,5 +46,4 @@ class RssPlugNode(template.Node):
 		address = resolve(self.address, context)
 		tmpl = resolve(self.templ, context)
 		t = template.loader.get_template(tmpl)
-		print "render() called"
 		return ''.join([t.render(template.Context({ 'item': item })) for item in self.rss(address).entries[:6]])
