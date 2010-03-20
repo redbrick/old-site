@@ -3,6 +3,7 @@
     <a href="{% url post object.id %}">{{ object.title }}</a>
     <small>{{ object.pub_date|timesince }} ago</small>
     </h1>
-	<p>{{ object.large_teaser }}</p>
-
+	<div class="innercontent">
+		<p>{{ object.large_teaser }}</p>
+	</div>
 </div>
