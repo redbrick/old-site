@@ -53,14 +53,31 @@ div.contentcontainer {
 	width: 900px;
 }
 div.sidebar{
-	padding-top: 10px;
-	width : 280px;
+	padding-left:25px;
+	width : 255px;
 	float : right;
 }
+div.sidebar h1{
+	font-size: 15px;
+	color: #000;
+	background-image : url(/media/images/yellowbar.png);
+}
+div.sidebar a {
+	font-size: 10px;
+	padding-left: 20px;
+	 text-decoration: none;
+}
+div.sidebar a:link {color: #000; }
+div.sidebar a:active {color: #ff0000; }
+div.sidebar a:visited {color: #000; }
+div.sidebar a:hover {color: #ff0000; }
+
 div.sidebarbox1{
 	width : 280px;
-	height: 110px;
-	background-image : url(/media/images/largeYellowSquare.png);
+	background-repeat : no-repeat;
+}
+div.sidebarbox2{
+	width : 280px;
 	background-repeat : no-repeat;
 }
 /* all fallwoing used for banner, icon menu and menu.. */
