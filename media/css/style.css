@@ -1,0 +1,332 @@
+html, body {
+	background-color : #fff;
+	color : #000;
+	font-family:'Lucida Grande',Verdana,Arial,Helvetica,sans-serif;
+	margin : 0px;
+	height: auto%; 
+	background: url('/media/images/bgcolor.png') repeat-x;
+}
+div.container {
+	min-height: 100%;
+	margin-bottom: -110px;
+	position: relative;
+	
+	width : 900px;
+	margin-left : auto;
+	margin-right : auto;
+	color : #000;
+	background-color : transparent;
+}
+/* page content style */
+div.content {
+	width:615px;
+	float: left;   
+}
+
+div.content h1{
+	width: 620px;
+	height: 19px;
+	font-size: 14px;
+	color : #fff;
+	padding-top: 1px;
+	padding-left: 7px;
+	background-image : url(/media/images/h1.png);
+	background-repeat : no-repeat;
+	
+}
+div.content h1 a:link {color: #fff; text-decoration: none; }
+div.content h1 a:active {color: #fff; text-decoration: underline; }
+div.content h1 a:visited {color: #fff; text-decoration: none; }
+div.content h1 a:hover {color: #000; text-decoration: none; }
+div.content small{
+	float: right;
+	color : #ddd;
+	padding-top: 1px;
+	padding-right: 9px;
+}
+div.content p{
+	font-size: 10pt;
+	padding-left: 5px;
+	text-align: justify; 
+}
+div.contentcontainer {
+	width: 900px;
+}
+div.sidebar{
+	padding-left:25px;
+	width : 255px;
+	float : right;
+}
+div.sidebar h1{
+	font-size: 15px;
+	color: #000;
+	background-image : url(/media/images/yellowbar.png);
+}
+div.sidebar a {
+	font-size: 10px;
+	padding-left: 20px;
+	 text-decoration: none;
+}
+div.sidebar a:link {color: #000; }
+div.sidebar a:active {color: #ff0000; }
+div.sidebar a:visited {color: #000; }
+div.sidebar a:hover {color: #ff0000; }
+
+div.sidebarbox1{
+	width : 280px;
+	background-repeat : no-repeat;
+}
+div.sidebarbox2{
+	width : 280px;
+	background-repeat : no-repeat;
+}
+/* all fallwoing used for banner, icon menu and menu.. */
+div.primary_header {
+	width : 900px;
+	background-image : url(/media/images/headerbg.png);
+	background-repeat : no-repeat;
+	background-position : left bottom;
+	height : 150px;
+
+}
+div.logo{
+	width : 250px;
+	height : 80px;
+	margin-top : 70px;
+	margin-left : 50px;
+	float: left;	
+}
+div.menus{
+	height: 110px;
+	width : 580px;
+	float: right;
+}
+div.icon_menu {
+	padding:none;
+	text-align : right;
+	margin-top : 50px;
+	margin-right : 70px;
+	width : 530px;
+	height: 100px;
+}
+div.icon_menu img {
+	padding-left : 20px;
+	border : none;
+}
+div.icon_menu ul li {
+	display: block;
+	height: 80px;
+	padding-right: 10px;
+	margin-top: 0px;
+	list-style : none;
+	float : right;
+	list-style-position : outside;
+	list-style-type : none;
+}
+/* Main news area for front page */
+div.main_area {
+	width : 900px;
+	height: 245px;
+}
+div.main_area_left { 
+	width : 580px;
+	height: 210px;
+	padding : 20px;	
+
+	margin-left : 10px;
+	border : none;
+	float: left;
+	background-image : url(/media/images/mainSquare.png);
+	color : #fff;
+	font-size : 12pt;
+}
+
+div.main_area_left h1 {
+	margin : 0px;
+}
+
+div.main_area a {
+	color : #fff;
+	background-color : transparent;
+}
+
+div.main_area_boxes {
+	width : 257px;
+	height: 240px;
+	margin-right : 13px;
+	float : right;
+	font-size : 10pt;
+	color : #fff;
+	background-color : transparent;
+
+}
+
+div.main_area_boxes div {
+	padding : 20px;
+	padding-top : 15px;
+	padding-bottom : 15px;
+	height : 50px;
+	width : 220px;
+	display: block;
+	margin-left: 4px;
+	margin-bottom: 6px;
+}
+div.main_area_boxes h1 {
+	font-size : 14pt;
+	margin : 0px;
+}
+
+div.main_area_boxes p {
+	margin : 0px;
+	padding : 0px;
+}
+
+div.main_area_boxes p.read_more {
+	font-size : 8pt;
+}
+
+div.main_area_box1 {
+	background-image : url(/media/images/yellowSquare.png);
+}
+div.main_area_box1:hover{
+	background-image : url(/media/images/yellowSquareHover.png);
+}
+div.main_area_box2 {
+	background-image : url(/media/images/redSquare.png);
+}
+
+div.main_area_box2:hover{
+	background-image : url(/media/images/redSquareHover.png);
+}
+
+div.main_area_box3 {
+	background-image : url(/media/images/pinkSquare.png);
+}
+
+div.main_area_box3:hover{
+	background-image : url(/media/images/pinkSquareHover.png);
+}
+
+
+/* Drop down menu _______ */
+div.top_menu {
+	background: url('/media/images/menubg.png');
+	width : 900px;
+	height : 29px;
+	font-size : 8pt;
+	font-weight : bold;
+	margin-bottom : 6px;
+}
+
+div.top_menu img {
+	border : none;
+}
+#sddm{	
+	margin: 0;
+	padding: 0;
+	z-index: 30
+}
+#sddm li{	
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: right;
+	font: bold 11px arial
+}
+
+#sddm li a{	
+	display: block;
+	margin: 0 1px 0 0;
+	padding: 0px 20px 0px;
+	color: #FFF;
+	text-align: center;
+	text-decoration: none
+}
+
+#sddm li a:hover{	
+}
+#sddm div{	
+	position: absolute;
+	visibility: hidden;
+	margin: 0;
+	padding: 0;
+	background: #EAEBD8;
+	border: 1px solid #888;
+	border-left : none;
+	border-right : none;
+}
+
+#sddm div a{	
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 5px 10px;
+	width: auto;
+	white-space: nowrap;
+	text-align: left;
+	text-decoration: none;
+	background: #888;
+	color: #FFF;
+	font: 10pt Arial
+}
+#sddm div a:hover{
+	background: #cc0000;
+	color: #FFF
+}
+
+/* Footer_________________________________________________ */
+div.links a:link {color: #000; text-decoration: none; }
+div.links a:active {color: #ff0000; text-decoration: underline; }
+div.links a:visited {color: #000; text-decoration: none; }
+div.links a:hover {color: #ff0000; text-decoration: none; }
+
+div.footer{
+	margin-top: 12px;
+	width : 850px;
+	height : 110px;
+	background-image : url(/media/images/footer.png);
+	background-position : top center;
+	background-repeat : no-repeat;
+	
+	position: relative;
+	margin-left : auto;
+	margin-right : auto;
+	padding : 25px;
+	padding-top : 10px;
+}
+.clearfooter {
+height: 20px;
+clear: both;
+}
+div.links{
+	padding: none;
+	margin: none;
+	display: inline;
+	float: left;
+	font-size: 8pt;
+	width: 120px;
+}
+
+div.links h3 {
+	font-weight : bold;
+	color:  #000;
+	/*border-bottom:3px solid #fff;*/
+	padding: none;
+	margin: none;
+	padding:0 0.5em 0.125em;
+}
+
+div.links ul {
+	padding-left: 10px;
+	margin: none;
+	line-height: 1.2;
+}
+div.links li {
+	padding: none;
+	margin: none;
+	list-style: none;
+}
+div.links .blank{
+	color:  #ccc;
+}
+
