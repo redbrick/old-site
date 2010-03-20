@@ -1,0 +1,7 @@
+<div id="object_{{ object.id }}">
+<h1>
+    <a href="{% url post object.id %}">{{ object.title }}</a>
+    <small>{{ object.pub_date|timesince }} ago</small>
+    </h1>
+    <p>{{ object.largeTeaser }}</p>
+</div>
