@@ -11,3 +11,5 @@ Setting this up:
  * Run rbsite/manage.py syncdb to create ~/rbsite.db and fill in your
    local admin details.
 
+Some notes:
+ * The RSS reader plugin (rssplug.py) needs feedparser to be installed. 
