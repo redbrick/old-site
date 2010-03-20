@@ -3,5 +3,6 @@
     <a href="{% url post object.id %}">{{ object.title }}</a>
     <small>{{ object.pub_date|timesince }} ago</small>
     </h1>
-    <p>{{ object.largeTeaser }}</p>
+	<p>{{ object.large_teaser }}</p>
+
 </div>
