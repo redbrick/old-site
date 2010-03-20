@@ -1,1 +1,38 @@
-<h1>hello</h1>
+{% extends 'base.html' %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block content %}
+<div class="main_area">
+	<div class="main_area_left">
+		{% if LL %}
+			<h1>{{ LL.title }}</h1>
+			<p>{{ LL.large_teaser|safe }}</p>
+			<p class="read_more"><a href="{{ LL.get_absolute_url }}">Read More</a></p>
+		{% endif %}
+	</div>	
+	<div class ="main_area_boxes">
+		<div class = "main_area_box1">
+			{% if STR %}
+				<h1>{{ STR.title }}</h1>
+				<p>{{ STR.teaser|safe }}</p>
+				<p class="read_more"><a href="{{STR.get_absolute_url}}">Read More</a></p>
+			{% endif %}
+		</div>
+		<div class = "main_area_box2">
+			{% if SMR %}
+				<h1>{{ SMR.title }}</h1>
+				<p>{{ SMR.teaser|safe }}</p>
+				<p class="read_more"><a href="{{SMR.get_absolute_url}}">Read More</a></p>
+			{% endif %}
+		</div>
+		<div class = "main_area_box3">
+			{% if SBR %}
+				<h1>{{ SBR.title }}</h1>
+				<p>{{ SBR.teaser|safe }}</p>
+				<p class="read_more"><a href="{{SBR.get_absolute_url}}">Read More</a></p>
+			{% endif %}
+		</div>
+	</div>
+</div>
+{% endblock %}

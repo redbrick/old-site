@@ -1,7 +1,10 @@
-{% extends 'real_base.html' %}
+{% extends 'base.html' %}
+
+{% block title %}All Posts{% endblock %}
 
 {% load comments %}
 {% block content %}
+
 <div class = "contentcontainer">
 	<div class = "content">
 		{% for object in postlist.object_list %}
@@ -13,6 +16,5 @@
 		{% endfor %}
 		{% include 'blog/pagination.html' %}
 	</div>
-	{% include 'sidebar.html' %}
 </div>
 {% endblock %}
