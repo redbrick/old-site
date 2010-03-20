@@ -1,0 +1,19 @@
+<div class = "sidebar">
+	<div class = "sidebarbox1">
+		<h1> Latest Wiki Updates</h1>
+		<ul>
+			{% load rssplug %}
+			{% rssplug "http://wiki.redbrick.dcu.ie/mw/index.php?title=Special:RecentChanges&feed=rss" "rss_item.html" %}
+		</ul>
+	</div>
+	<div class = "sidebarbox2">
+		<h1> latest Tweets</h1>
+		<ul>
+			{% load rssplug %}
+			{% rssplug "http://www.redbrick.dcu.ie/twitter.rss" "rss_item.html" %}
+		</ul>
+	</div>
+	<div class = "sidebarbox3">
+		<h1> Redbrick Events</h1>
+	</div>
+</div>
