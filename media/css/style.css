@@ -144,13 +144,13 @@ div.main_area {
 	height: 245px;
 }
 div.main_area_left { 
-	width : 580px;
+	width : 601px;
 	height: 210px;
 	padding : 20px;	
-	margin-left : 10px;
+	margin-left : 0px;
 	border : none;
 	float: left;
-	background-image : url(/media/images/mainSquare.png);
+	background-image : url(/media/images/bigsquare.png);
 	color : #fff;
 	font-size : 12pt;
 }
@@ -164,7 +164,7 @@ div.main_area a {
 div.main_area_boxes {
 	width : 257px;
 	height: 240px;
-	margin-right : 13px;
+	margin-right : 2px;
 	float : right;
 	font-size : 10pt;
 	color : #fff;
@@ -177,7 +177,7 @@ div.main_area_boxes div {
 	height : 50px;
 	width : 220px;
 	display: block;
-	margin-left: 4px;
+	margin-left: 0px;
 	margin-bottom: 6px;
 }
 div.main_area_boxes h1 {
@@ -192,23 +192,16 @@ div.main_area_boxes p.read_more {
 	font-size : 8pt;
 }
 div.main_area_box1 {
-	background-image : url(/media/images/yellowSquare.png);
+	background: url(/media/images/smtop.png) right no-repeat;
 }
-div.main_area_box1:hover{
-	background-image : url(/media/images/yellowSquareHover.png);
-}
+
 div.main_area_box2 {
-	background-image : url(/media/images/redSquare.png);
-}
-div.main_area_box2:hover{
-	background-image : url(/media/images/redSquareHover.png);
+	background: url(/media/images/smmid.png) right no-repeat;
 }
 div.main_area_box3 {
-	background-image : url(/media/images/pinkSquare.png);
+	background: url(/media/images/smbtm.png) right no-repeat;
 }
-div.main_area_box3:hover{
-	background-image : url(/media/images/pinkSquareHover.png);
-}
+
 /* Drop down menu _______ */
 div.top_menu {
 	background: url('/media/images/menubg.png');
@@ -229,6 +222,7 @@ div.top_menu img {
 #sddm li{	
 	margin: 0;
 	padding: 0;
+	height : 29px;
 	list-style: none;
 	float: right;
 	font: bold 11px arial
@@ -241,14 +235,18 @@ div.top_menu img {
 	text-align: center;
 	text-decoration: none
 }
-#sddm li a:hover{	
+#sddm li a.header {
+	height : 29px;
 }
+#sddm li a:hover {	
+}
+
 #sddm div{	
 	position: absolute;
 	visibility: hidden;
 	margin: 0;
 	padding: 0;
-	background: #EAEBD8;
+	background: #838383;
 	border: 1px solid #888;
 	border-left : none;
 	border-right : none;
