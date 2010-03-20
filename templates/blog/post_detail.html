@@ -12,7 +12,7 @@
 		    <small>{{ object.pub_date|timesince }} ago</small>
 		    </h1>
 		    <div class="innercontent">
-			 {{ object.body }}
+			 {{ object.body|safe }}
 			</div>
 			</div>
 			 <p>

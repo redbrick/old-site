@@ -4,6 +4,6 @@
     <small>{{ object.pub_date|timesince }} ago</small>
     </h1>
 	<div class="innercontent">
-		<p>{{ object.large_teaser }}</p>
+		<p>{{ object.large_teaser|safe }}</p>
 	</div>
 </div>
