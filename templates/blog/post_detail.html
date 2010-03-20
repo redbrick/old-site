@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ object.title }}{% endblock %}
+
+{% block content %}
+{% load comments %}
+<div class = "contentcontainer">
+	<div class = "content">
+		<div id="object_{{ object.id }}">
+		<h1>
+			<a href="/news/"> Back to posts</a>
+		    <small>{{ object.pub_date|timesince }} ago</small>
+		    </h1>
+		    {{ object.body }}
+		</div>	
+	</div>
+	{% include 'sidebar.html' %}
+	<div class = "clearfooter"></div>
+</div>
+{% endblock %}
