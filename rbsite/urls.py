@@ -27,13 +27,13 @@ urlpatterns = patterns('',
     (r'^feeds/(?P<url>.*)/?$', 'django.contrib.syndication.views.feed', {'feed_dict': feeds}),
     
     # static media, for dev only
-    (r'media/(?P<path>.*)$', 'django.views.static.serve', {'document_root':rbsite.settings.MEDIA_ROOT}),
+    (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root':rbsite.settings.MEDIA_ROOT}),
    
 	# homepage
 	url(r'^/?$', 'rbsite.blog.views.index', name='blog'),
 	
 	# Pubcookie login helper
-	url(r'/pkauth/mksession\.py/auth$', 'rbsite.lib.pkauth.pkauth'),
+	url(r'^pkauth/auth$', 'rbsite.lib.pkauth.pkauth'),
 
 	# Everything else gets passed through static page handler
    (r'', 'rbsite.static.views.static'),

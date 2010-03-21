@@ -30,7 +30,7 @@ def pkauth(request):
 		return redirect("/")
 	
 	user_obj = authenticate(username=os.environ['REMOTE_USER'], password=None)
-	if user is not None:
-		login(request, user)
+	if user_obj is not None:
+		login(request, user_obj)
 	
 	return redirect("/")
