@@ -56,7 +56,12 @@ div.innercontent h2,h3,h4,h5,h6 {
 
 div.content p a {
 	color : #666;
-	background-color : #fff;
+	background-color : transparent;
+}
+
+div.content li a {
+	color : #666;
+	background-color : transparent;
 }
 
 div.contentcontainer {
