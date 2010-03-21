@@ -20,6 +20,12 @@ class PubcookieAuthBackend:
 			user_obj.save()
 		
 		return user_obj
+	
+	def get_user(self, user_id):
+		try:
+			return User.objects.get(pk=user_id)
+		except User.DoesNotExist:
+			return None
 
 def pkauth(request):
 	response = HttpResponse()
@@ -35,3 +41,4 @@ def pkauth(request):
 		login(request, user_obj)
 	
 	return redirect("/")
+
