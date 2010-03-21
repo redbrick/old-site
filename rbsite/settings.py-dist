@@ -91,3 +91,10 @@ INSTALLED_APPS = (
 	 'rbsite.blog',
 	 'rbsite.static',
 )
+
+
+AUTHENTICATION_BACKENDS = (
+	'django.contrib.auth.backends.ModelBackend',
+#	'rbsite.lib.pkauth.PubcookieAuthBackend',
+)
+

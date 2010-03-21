@@ -31,7 +31,10 @@ urlpatterns = patterns('',
    
 	# homepage
 	url(r'^/?$', 'rbsite.blog.views.index', name='blog'),
-   
+	
+	# Pubcookie login helper
+	url(r'/pkauth/mksession\.py/auth$', 'rbsite.lib.pkauth.pkauth'),
+
 	# Everything else gets passed through static page handler
    (r'', 'rbsite.static.views.static'),
 )
