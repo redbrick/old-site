@@ -323,10 +323,9 @@ div.links h3 {
 	/*border-bottom:3px solid #fff;*/
 	padding: none;
 	margin: none;
-	padding:0 0.5em 0.125em;
 }
 div.links ul {
-	padding-left: 10px;
+	padding-left: 0px;
 	margin: none;
 	line-height: 1.2;
 }
