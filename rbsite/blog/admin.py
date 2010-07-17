@@ -16,4 +16,22 @@ class PostAdmin(admin.ModelAdmin):
 		
 		obj.save()
 
+	# Automatically filter to the logged in users posts
+	# And show them all if the user is a superuser.
+	def queryset(self, request):
+		if request.user.is_superuser:
+			return Post.objects.all()
+		return Post.objects.filter(author=request.user)
+
+	# Ensure that the user is allowed to edit that object.
+	# User is only allowed to edit the posts if they own it
+	# Superuser can only edit a users posts, not create one.
+	def has_change_permission(self, request, obj=None):
+		has_class_permission = super(PostAdmin, self).has_change_permission(request, obj)
+		if not has_class_permission:
+			return False
+		if obj is not None and not request.user.is_superuser and request.user.id != obj.author.id:
+			return False
+		return True
+
 admin.site.register(Post, PostAdmin)
