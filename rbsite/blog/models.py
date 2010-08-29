@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.core.paginator import Paginator, InvalidPage, EmptyPage
 
 # Create your models here.
 class Post(models.Model):
