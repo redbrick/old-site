@@ -1,0 +1,7 @@
+{%if latest_survey%}
+	<ul>
+		<li><a href="{{ latest_survey.get_absolute_url }}">{{ latest_survey.title }}</a></li>
+	</ul>
+{% else %}
+	<p>No Surveys Available</p>
+{% endif %}

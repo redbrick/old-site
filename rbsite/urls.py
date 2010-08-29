@@ -32,6 +32,9 @@ urlpatterns = patterns('',
 	# homepage
 	url(r'^/?$', 'rbsite.blog.views.index', name='blog'),
 	
+	#Surveys	
+	(r'^surveys/', include('rbsite.survey.urls')),
+	
 	# Pubcookie login helper
 	url(r'^pkauth/auth$', 'rbsite.lib.pkauth.pkauth'),
 
