@@ -5,7 +5,7 @@ class QuestionsInline(admin.StackedInline):
 	model = Question
 
 class SurveyAdmin(admin.ModelAdmin):
-	fields = ('title', 'show_on_poll_page')
+	fields = ('title', 'show_on_poll_page', 'number_of_questions')
 	list_display = ('title', 'pub_date', 'show_on_poll_page')
 	date_hierarchy = 'pub_date'
 	inlines = [QuestionsInline]
