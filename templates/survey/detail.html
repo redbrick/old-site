@@ -8,15 +8,15 @@
 		{% for question in survey.question_set.all %}
 			<h2>Question {{ forloop.counter }}</h2>
 			<p>{{ question.question }}<p><br />
-			{% if question.input_type == "text" %}
+			{% ifequal question.input_type "text" %}
 				<input type="text" name="q{{ forloop.counter }}" />
 				<br />
-			{% endif %}
-			{% if question.input_type == "textarea" %}
+			{% endifequal %}
+			{% ifequal question.input_type "textarea" %}
 				<textarea name="q{{ forloop.counter }}" cols=50 rows=10></textarea>
 				<br />
-			{% endif %}	
-			{% if question.input_type == "select" %}
+			{% endifequal %}	
+			{% ifequal question.input_type "select" %}
 				<select name="q{{ forloop.counter }}">
 					{% if question.option1 %}
 						<option value="option1">{{ question.option1 }}</option>
@@ -34,8 +34,8 @@
 						<option value="option5">{{ question.option5 }}</option>
 					{% endif %}
 				</select>
-			{% endif %}
-			{% if question.input_type == "radio" %}
+			{% endifequal %}
+			{% ifequal question.input_type "radio" %}
 				{% if question.option1 %}
 					<input type="radio" name="q{{ forloop.counter }}" value="{{ question.option1 }}" id="{{ question.option1 }}{{ question.id }}"/>
 					<label for="{{ question.option1 }}{{ question.id }}">{{ question.option1 }}</label>
@@ -61,8 +61,8 @@
 					<label for="{{ question.option5 }}{{ question.id }}">{{ question.option5 }}</label>
 					<br />
 				{% endif %}
-			{% endif %}
-			{% if question.input_type == "checkbox" %}
+			{% endifequal %}
+			{% ifequal question.input_type "checkbox" %}
 				{% if question.option1 %}
 					<input type="checkbox" name="q{{ forloop.counter }}" value="{{ question.option1 }}" id="{{ question.option1 }}{{ question.id }}"/>
 					<label for="{{ question.option1 }}{{ question.id }}">{{ question.option1 }}</label>
@@ -88,7 +88,7 @@
 					<label for="{{ question.option5 }}{{ question.id }}">{{ question.option5 }}</label>
 					<br />
 				{% endif %}
-			{% endif %}
+			{% endifequal %}
 		{% endfor %}
 		<br />
 		<input type="submit" value="Submit your answers" />

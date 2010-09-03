@@ -5,6 +5,7 @@ from django.db import models
 class Survey(models.Model):
 	title = models.CharField(max_length=200)
 	show_on_poll_page = models.BooleanField()
+	number_of_questions = models.PositiveIntegerField()
 	pub_date = models.DateTimeField('Date Published', auto_now_add=True)
 	up_date = models.DateTimeField('Date Updated', auto_now=True)
 
