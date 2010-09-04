@@ -3,6 +3,7 @@ from django.shortcuts import render_to_response, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect
 from django.core.urlresolvers import reverse
 from datetime import datetime
+import os
 
 # Create your views here.
 
@@ -25,6 +26,7 @@ def thanks(request, survey_id):
 	p = get_object_or_404(Survey, pk=survey_id)
 	return render_to_response('survey/thanks.html', {'title': p.title})
 
+# If anyone can see a shorter/quicker way to do this... By all means :-)
 def submit(request, survey_id):
 	args = {}
 	p = get_object_or_404(Survey, pk=survey_id)
@@ -32,7 +34,20 @@ def submit(request, survey_id):
 	if request.method == 'POST':
 		# Needed to have random/unique filenames
 	 	now = datetime.now()
-		dump_file = open("answers" + now.strftime("%Y-%m-%d-%H:%M:%S") + ".txt" , "w")
+
+		# Create a folder for the current surveys answers
+		answers_dir = '/home/committe/cmtstuff/survey/%i' % p.id
+
+		try:
+			os.makedirs(answers_dir)
+		except OSError:
+			if os.path.isdir(answers_dir):
+				pass
+			else:
+				raise
+
+		#open a file in that directory
+		dump_file = open(answers_dir + "/answers-" + now.strftime("%Y-%m-%d-%H:%M:%S") + ".txt" , "w")
 
 		#Keeps going until the number of questions specified
 		for i in range(1, p.number_of_questions + 1):
