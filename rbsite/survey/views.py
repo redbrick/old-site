@@ -36,13 +36,15 @@ def submit(request, survey_id):
 	 	now = datetime.now()
 
 		# Create a folder for the current surveys answers
-		answers_dir = '/home/committe/cmtstuff/survey/%i' % p.id
+		answers_dir = '/home/committe/cmtstuff/surveys/%s' % p.title
 
+		# Create the answers dir, if a survey of the same title exists, create
+		# answers_dir/<survey_id>
 		try:
 			os.makedirs(answers_dir)
 		except OSError:
 			if os.path.isdir(answers_dir):
-				pass
+				os.makedirs(answers_dir + '/%i') % p.id
 			else:
 				raise
 
