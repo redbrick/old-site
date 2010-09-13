@@ -1,0 +1,19 @@
+{% for question in survey.question_set.all %}
+	<h2>Question {{ forloop.counter }}</h2>
+	<p>{{ question.question }}<p><br />
+	{% ifequal question.input_type "text" %}
+		{% include 'survey/text.html' %}
+	{% endifequal %}
+	{% ifequal question.input_type "textarea" %}
+		{% include 'survey/text_area.html' %}
+	{% endifequal %}	
+	{% ifequal question.input_type "select" %}
+		{% include 'survey/select.html' %}
+	{% endifequal %}
+	{% ifequal question.input_type "radio" %}
+		{% include 'survey/radio.html' %}
+	{% endifequal %}
+	{% ifequal question.input_type "checkbox" %}
+		{% include 'survey/checkbox.html' %}
+	{% endifequal %}
+{% endfor %}
