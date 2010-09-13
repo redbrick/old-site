@@ -1,0 +1,25 @@
+{% if question.option1 %}
+	<input type="radio" name="q{{ forloop.counter }}" value="{{ question.option1 }}" id="{{ question.option1 }}{{ question.id }}"/>
+	<label for="{{ question.option1 }}{{ question.id }}">{{ question.option1 }}</label>
+	<br />
+{% endif %}
+{% if question.option2 %}
+	<input type="radio" name="q{{ forloop.counter }}" value="{{ question.option2 }}" id="{{ question.option2 }}{{ question.id }}"/>
+	<label for="{{ question.option2 }}{{ question.id }}">{{ question.option2 }}</label>
+	<br />
+{% endif %}
+{% if question.option3 %}
+	<input type="radio" name="q{{ forloop.counter }}" value="{{ question.option3 }}" id="{{ question.option3 }}{{ question.id }}"/>
+	<label for="{{ question.option3 }}{{ question.id }}">{{ question.option3 }}</label>
+	<br />
+{% endif %}
+{% if question.option4 %}
+	<input type="radio" name="q{{ forloop.counter }}" value="{{ question.option4 }}" id="{{ question.option4 }}{{ question.id }}"/>
+	<label for="{{ question.option4 }}{{ question.id }}">{{ question.option4 }}</label>
+	<br />
+{% endif %}
+{% if question.option5 %}
+	<input type="radio" name="q{{ forloop.counter }}" value="{{ question.option5 }}" id="{{ question.option5 }}{{ question.id }}"/>
+	<label for="{{ question.option5 }}{{ question.id }}">{{ question.option5 }}</label>
+	<br />
+{% endif %}
