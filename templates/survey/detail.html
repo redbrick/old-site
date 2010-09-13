@@ -1,97 +1,23 @@
-{# Icky code is very icky I know, I'll clean it later #}
+{% extends 'base.html' %}
 
-{% if error_message %}
-	<p><strong>{{ error_message }}</strong></p>
-{% else %}
-	<h1>{{ survey.title }}</h1>
-	<form action="/surveys/{{ survey.id }}/submit/" method="post">
-		{% for question in survey.question_set.all %}
-			<h2>Question {{ forloop.counter }}</h2>
-			<p>{{ question.question }}<p><br />
-			{% ifequal question.input_type "text" %}
-				<input type="text" name="q{{ forloop.counter }}" />
-				<br />
-			{% endifequal %}
-			{% ifequal question.input_type "textarea" %}
-				<textarea name="q{{ forloop.counter }}" cols=50 rows=10></textarea>
-				<br />
-			{% endifequal %}	
-			{% ifequal question.input_type "select" %}
-				<select name="q{{ forloop.counter }}">
-					{% if question.option1 %}
-						<option value="option1">{{ question.option1 }}</option>
-					{% endif %}
-					{% if question.option2 %}
-						<option value="option2">{{ question.option2 }}</option>
-					{% endif %}
-					{% if question.option3 %}
-						<option value="option3">{{ question.option3 }}</option>
-					{% endif %}
-					{% if question.option4 %}
-						<option value="option4">{{ question.option4 }}</option>
-					{% endif %}
-					{% if question.option5 %}
-						<option value="option5">{{ question.option5 }}</option>
-					{% endif %}
-				</select>
-			{% endifequal %}
-			{% ifequal question.input_type "radio" %}
-				{% if question.option1 %}
-					<input type="radio" name="q{{ forloop.counter }}" value="{{ question.option1 }}" id="{{ question.option1 }}{{ question.id }}"/>
-					<label for="{{ question.option1 }}{{ question.id }}">{{ question.option1 }}</label>
+{% block title %}{{ survey.title }}{% endblock %}
+
+{% block content %}
+	{% if error_message %}
+		<p><strong>{{ error_message }}</strong></p>
+	{% else %}
+		<div class="contentcontainer">
+			<div class="content">
+				<h1>{{ survey.title }}</h1>
+				<form action="/surveys/{{ survey.id }}/submit/" method="post">
+					{% include 'survey/forloop.html' %}
 					<br />
-				{% endif %}
-				{% if question.option2 %}
-					<input type="radio" name="q{{ forloop.counter }}" value="{{ question.option2 }}" id="{{ question.option2 }}{{ question.id }}"/>
-					<label for="{{ question.option2 }}{{ question.id }}">{{ question.option2 }}</label>
-					<br />
-				{% endif %}
-				{% if question.option3 %}
-					<input type="radio" name="q{{ forloop.counter }}" value="{{ question.option3 }}" id="{{ question.option3 }}{{ question.id }}"/>
-					<label for="{{ question.option3 }}{{ question.id }}">{{ question.option3 }}</label>
-					<br />
-				{% endif %}
-				{% if question.option4 %}
-					<input type="radio" name="q{{ forloop.counter }}" value="{{ question.option4 }}" id="{{ question.option4 }}{{ question.id }}"/>
-					<label for="{{ question.option4 }}{{ question.id }}">{{ question.option4 }}</label>
-					<br />
-				{% endif %}
-				{% if question.option5 %}
-					<input type="radio" name="q{{ forloop.counter }}" value="{{ question.option5 }}" id="{{ question.option5 }}{{ question.id }}"/>
-					<label for="{{ question.option5 }}{{ question.id }}">{{ question.option5 }}</label>
-					<br />
-				{% endif %}
-			{% endifequal %}
-			{% ifequal question.input_type "checkbox" %}
-				{% if question.option1 %}
-					<input type="checkbox" name="q{{ forloop.counter }}" value="{{ question.option1 }}" id="{{ question.option1 }}{{ question.id }}"/>
-					<label for="{{ question.option1 }}{{ question.id }}">{{ question.option1 }}</label>
-					<br />
-				{% endif %}
-				{% if question.option2 %}
-					<input type="checkbox" name="q{{ forloop.counter }}" value="{{ question.option2 }}" id="{{ question.option2 }}{{ question.id }}"/>
-					<label for="{{ question.option2 }}{{ question.id }}">{{ question.option2 }}</label>
-					<br />
-				{% endif %}
-				{% if question.option3 %}
-					<input type="checkbox" name="q{{ forloop.counter }}" value="{{ question.option3 }}" id="{{ question.option3 }}{{ question.id }}"/>
-					<label for="{{ question.option3 }}{{ question.id }}">{{ question.option3 }}</label>
-					<br />
-				{% endif %}
-				{% if question.option4 %}
-					<input type="checkbox" name="q{{ forloop.counter }}" value="{{ question.option4 }}" id="{{ question.option4 }}{{ question.id }}"/>
-					<label for="{{ question.option4 }}{{ question.id }}">{{ question.option4 }}</label>
-					<br />
-				{% endif %}
-				{% if question.option5 %}
-					<input type="checkbox" name="q{{ forloop.counter }}" value="{{ question.option5 }}" id="{{ question.option5 }}{{ question.id }}"/>
-					<label for="{{ question.option5 }}{{ question.id }}">{{ question.option5 }}</label>
-					<br />
-				{% endif %}
-			{% endifequal %}
-		{% endfor %}
-		<br />
-		<input type="submit" value="Submit your answers" />
-		<p>Please note that the submit button is final, and you cannot edit your answers after you click it.</p>
-	</form>
-{% endif %}
+					<input type="submit" value="Submit your answers" />
+					<p>Please note that the submit button is final, and you cannot edit your answers after you click it.</p>
+				</form>
+			</div>
+			{% include 'sidebar.html' %}
+			<div class="clearfooter"></div>
+		</div>
+	{% endif %}
+{% endblock %}
