@@ -44,7 +44,7 @@ def submit(request, survey_id):
 			os.makedirs(answers_dir)
 		except OSError:
 			if os.path.isdir(answers_dir):
-				os.makedirs(answers_dir + '/%i') % p.id
+				pass
 			else:
 				raise
 
